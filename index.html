@@ -7,12 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-<iframe src="silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
 
-<audio controls autoplay loop>
-  <source src="Media\BUP.mp3" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+    <audio id="myAudio" src="Media\BUP.mp3"></audio>
+
+    <script>
+        document.addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        }, { once: true }); // Ensures it only plays on the first click
+    </script>
+	
     <div id="wrapper">
         <div id="level">
           <div class="inner">
